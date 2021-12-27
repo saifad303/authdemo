@@ -31,9 +31,9 @@ function SearchBar() {
         </div>
         <p className="text-[10px]">Showing 1-30 results</p>
       </div>
-      <div className=" absolute right-0 top-5 bg-[#b4009d] p-3 rounded rounded-r-none">
+      <button className=" absolute right-0 top-5 bg-[#b4009d] p-3 rounded rounded-r-none">
         <PlusCircleIcon className="h-10" />
-      </div>
+      </button>
     </div>
   );
 }

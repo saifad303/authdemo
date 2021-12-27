@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import Main from "../components/Main";
 import { BsGrid3X3GapFill } from "react-icons/bs";
 
 export default function Home() {
@@ -11,8 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className=" w-full">
         <Header />
+        <Main />
       </main>
     </div>
   );
