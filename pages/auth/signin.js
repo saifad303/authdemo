@@ -30,7 +30,7 @@ function SignIn({ providers }) {
             className=" outline-none border-b-2 border-gray-300 mb-2 sm:w-[75%]"
           />
           <div className="text-right text-xs lg:text-base  mr-[16%] sm:mr-[12%] mb-6 text-blue-600">
-            <a href="#">Forget Password ?</a>
+            <a href="#">Forget Password?</a>
           </div>
           <div className=" flex items-center justify-center">
             <button
@@ -61,7 +61,7 @@ function SignIn({ providers }) {
           </a>
         </div>
         <p className=" text-sm mb-10">
-          Don't have account ?{" "}
+          Don't have account ?
           <a href="#" className=" text-blue-500 font-semibold">
             Sign up
           </a>
