@@ -4,10 +4,15 @@ import {
   CogIcon,
   ChevronDownIcon,
 } from "@heroicons/react/outline";
+
+import { useSession } from "next-auth/react";
 import ProfileDropDown from "./ProfileDropDown";
 import { useState } from "react";
+
 function ProfileAndNotification() {
   const [isDropDown, setIsDropDown] = useState(false);
+  const { data: session } = useSession();
+
   return (
     <div className=" flex flex-col h-full w-[105px] sm:w-[120px] relative">
       <button
@@ -17,7 +22,7 @@ function ProfileAndNotification() {
         className="bg-[#2f388f] h-full flex items-center space-x-1"
       >
         <p className="text-white text-xs pl-[12px] sm:text-sm md:text-sm">
-          David Gomez
+          {session?.user.name}
         </p>
         <ChevronDownIcon className="h-4 text-white" />
       </button>

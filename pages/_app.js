@@ -1,13 +1,16 @@
 import "../styles/globals.css";
 import { SessionProvider } from "next-auth/react";
+import DataInsertProvider from "../context/DataInsertProvider";
 
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }) {
   return (
-    <SessionProvider session={session}>
-      <Component {...pageProps} />
-    </SessionProvider>
+    <DataInsertProvider>
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
+    </DataInsertProvider>
   );
 }

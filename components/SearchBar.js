@@ -5,8 +5,10 @@ import {
   ChevronRightIcon,
   PlusCircleIcon,
 } from "@heroicons/react/outline";
-
+import Link from "next/link";
+import { useInsertData } from "../context/DataInsertProvider";
 function SearchBar() {
+  const { insertFormHandler } = useInsertData();
   return (
     <div className=" relative pl-5 pr-20 h-16 w-full bg-[#0c1251] flex items-center text-white">
       <div className="flex items-center space-x-7">
@@ -31,7 +33,10 @@ function SearchBar() {
         </div>
         <p className="text-[10px]">Showing 1-30 results</p>
       </div>
-      <button className=" absolute right-0 top-5 bg-[#b4009d] p-3 rounded rounded-r-none">
+      <button
+        className=" absolute right-0 top-5 bg-[#b4009d] p-3 rounded rounded-r-none"
+        onClick={() => insertFormHandler()}
+      >
         <PlusCircleIcon className="h-10" />
       </button>
     </div>
