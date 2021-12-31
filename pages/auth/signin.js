@@ -7,13 +7,17 @@ function SignIn({ providers }) {
   const { data: session, status } = useSession({
     required: true,
     onUnauthenticated() {
-      alert("You are not allowed here.");
+      // alert("You are not allowed here.");
     },
   });
   return (
     <div className="bg-blue-500 h-screen w-screen flex items-center justify-center overflow-y-auto">
       <div className=" w-[270px] sm:w-[300px] lg:w-[400px] bg-white text-center rounded">
         <p className=" text-2xl font-medium mt-[50px] mb-10">Login</p>
+        <p className="mb-3 font-semibold text-red-700">
+          Sign In with google and check my project and the rest is still under
+          construction
+        </p>
         <form action="" className="mb-9">
           <input
             type="text"
@@ -37,7 +41,7 @@ function SignIn({ providers }) {
             </button>
           </div>
         </form>
-        <p className="text-sm mb-3">Or Sign Up Using</p>
+        <p className="text-sm mb-3">Or Sign In Using</p>
         <div className="flex items-center justify-center space-x-2 mb-10">
           {Object.values(providers).map((provider) => (
             <div key={provider.id}>
