@@ -60,12 +60,10 @@ function SignIn({ providers }) {
             <BsTwitter height={15} width={15} color="white" />
           </a>
         </div>
-        <p className=" text-sm mb-10">
-          Don't have account ?
-          <a href="#" className=" text-blue-500 font-semibold">
-            Sign up
-          </a>
-        </p>
+        <p className=" text-sm mb-10 inline-block mr-1">Don't have account?</p>
+        <a href="#" className=" text-blue-500 font-semibold">
+          Sign up
+        </a>
       </div>
     </div>
   );
